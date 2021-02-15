@@ -16,11 +16,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
 
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 1.2'
 gem "mini_magick"
 
-
-
+gem 'carrierwave-dropbox', '~> 2.0'
 
 
 gem 'bootsnap', '>= 1.1.0', require: false
