@@ -21,6 +21,8 @@ gem "mini_magick"
 
 gem 'carrierwave-dropbox', '~> 2.0'
 
+gem 'devise'
+
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
