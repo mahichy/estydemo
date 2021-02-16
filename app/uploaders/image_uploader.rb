@@ -4,10 +4,11 @@ class ImageUploader < CarrierWave::Uploader::Base
    include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  # if Rails.env.development?
-  #   storage :file
-  # end
-  storage :dropbox
+  if Rails.env.development?
+    storage :file
+  else
+    storage :dropbox
+  end
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
