@@ -10,13 +10,20 @@
   </head>
 
   <body>
-      
-    <%= render 'shared/navbar'%>
-
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
     <div class="container">
+      
+      <%= render 'shared/navbar'%>
+
+      <% flash.each do |name, msg| %> 
+        <% if msg.is_a?(String) %> <div
+      class="alert alert-<%= name == :notice ? "success" : "danger" %>
+      alert-dismissable"> <button type="button" class="close" data-dissmiss="alert" aria-hidden= "true" >&times;</button>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      </div> <% end -%> <% end -%>
+
+      <!--  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p> -->
+
       <%= yield %>
       <p>copyright 2021</p>
     </div>
