@@ -1,3 +1,9 @@
+
+<div class="jumbotron">
+<h1>Handcrafted items from <br> around the world.</h1>
+<h2>Discover one-of-a-kind items </h2>
+</div>
+
 <div class="center">
   <div class="row">
     <% @listings.each do |listing| %>
@@ -9,9 +15,6 @@
             <h3>Thumbnail label</h3>
             <p><%= number_to_currency(listing.price) %> </p>
             <p><%=  "Sold by #{listing.user.name}" %></p>
-
-           
-
           </div>
         </div>
       </div> 
